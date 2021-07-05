@@ -55,3 +55,6 @@ Hinzugefügte Tabellen:
   
   Einstellungen
   <img src="https://www.bilder-hochladen.net/files/big/m4bn-7w-5558.png" />
+
+Meine Quelle für das Tutorial rund um ein Timeline Code:
+https://www.w3schools.com/howto/howto_css_timeline.asp
