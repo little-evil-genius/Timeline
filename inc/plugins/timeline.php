@@ -364,7 +364,7 @@ ASC=Absteigend',
                             <option value="31">31</option>
                         </select> 
                         <select name="month">
-							<option value="{$month}">{$month}</option>
+							<option value="{$month}">{$monthname}</option>
                             <option value="">kein Monat</option>
                             <option value="01">Januar</option>
                             <option value="02">Februar</option>
@@ -879,6 +879,7 @@ function timeline_misc() {
 
     eval("\$page = \"".$templates->get("timeline")."\";");
     output_page($page);
+    die();
   }
 
   // EREIGNIS HINZUFÜGEN
@@ -944,35 +945,36 @@ function timeline_misc() {
       // Füllen wir mal alles mit Informationen
       $tid = $edit['tid'];
       $day = $edit['day'];
+      $month = $edit['month'];
       $year = $edit['year'];
       $title = $edit['title'];
       $description = $edit['description'];
 
       // Monate als Namen ausgeben
       if ($edit['month'] == "01") {
-        $month = "{$lang->timline_month_january}";
+        $monthname = "{$lang->timline_month_january}";
        } elseif ($edit['month'] == "02") {
-        $month = "{$lang->timline_month_february}";
+        $monthname = "{$lang->timline_month_february}";
        } elseif ($edit['month'] == "03") {
-        $month = "{$lang->timline_month_march}";
+        $monthname = "{$lang->timline_month_march}";
        } elseif ($edit['month'] == "04") {
-        $month = "{$lang->timline_month_april}";
+        $monthname = "{$lang->timline_month_april}";
        } elseif ($edit['month'] == "05") {
-        $month = "{$lang->timline_month_may}";
+        $monthname = "{$lang->timline_month_may}";
        } elseif ($edit['month'] == "06") {
-        $month = "{$lang->timline_month_june}";
+        $monthname = "{$lang->timline_month_june}";
        } elseif ($edit['month'] == "07") {
-        $month = "{$lang->timline_month_july}";
+        $monthname = "{$lang->timline_month_july}";
        } elseif ($edit['month'] == "08") {
-        $month = "{$lang->timline_month_august}";
+        $monthname = "{$lang->timline_month_august}";
        } elseif ($edit['month'] == "09") {
-        $month = "{$lang->timline_month_september}";
+        $monthname = "{$lang->timline_month_september}";
        } elseif ($edit['month'] == "10") {
-        $month = "{$lang->timline_month_october}";
+        $monthname = "{$lang->timline_month_october}";
        } elseif ($edit['month'] == "11") {
-        $month = "{$lang->timline_month_november}";
+        $monthname = "{$lang->timline_month_november}";
        } elseif($edit['month'] == "12") {
-        $month = "{$lang->timline_month_december}";
+        $monthname = "{$lang->timline_month_december}";
        }
 
       eval("\$timeline_edit_date = \"".$templates->get("timeline_edit_date")."\";");
@@ -994,6 +996,7 @@ function timeline_misc() {
 
       eval("\$page = \"".$templates->get("timeline_edit")."\";");
       output_page($page);
+      die();
 
   }
 }
@@ -1165,6 +1168,7 @@ function timeline_modcp() {
 
         eval("\$page = \"".$templates->get("timeline_modcp")."\";");
         output_page($page);
+        die();
 
     }
 }
